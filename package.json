@@ -1,0 +1,24 @@
+{
+  "name": "uts-ethiopian-primayudha",
+  "version": "1.0.0",
+  "description": "Food and Restaurants Mongoose CRUD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/primayudhamanggala/simple-api-crud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/primayudhamanggala/simple-api-crud/issues"
+  },
+  "homepage": "https://github.com/primayudhamanggala/simple-api-crud#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.3"
+  }
+}
