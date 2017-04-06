@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let restaurantSchema = new Schema({
-  name: String,
+  name: {
+    type: String,
+    unique: true
+  },
   owner: String,
   address: String,
   open_status: Boolean,

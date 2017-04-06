@@ -2,12 +2,17 @@ const dbFood = require('../models/food')
 
 module.exports = {
   createFood: (req, res) => {
-    dbFood.create(req,body, (err, food) => {
+    dbFood.create(req.body, (err, food) => {
       ((err)) ? res.send(err) : res.send(food)
     })
   },
   getAllFood:(req, res) => {
     dbFood.find({},(err,food) => {
+      ((err)) ? res.send(err) : res.send(food)
+    })
+  },
+  getOneFood:(req, res) => {
+    dbFood.findById(req.params.id, (err,food) => {
       ((err)) ? res.send(err) : res.send(food)
     })
   },
