@@ -27,7 +27,10 @@ module.exports = {
     } else {
       req.body.menu = req.body.menu
     }
-    dbRestaurant.findByIdAndUpdate(req.params.id, req.body, (err,restaurant) => {
+    dbRestaurant.findByIdAndUpdate(req.params.id, {
+      $set:{name:req.body.name, owner:req.body.owner, address:req.body.address, open_status:req.body.open_status},
+      $addToSet: {menu: {$each: req.body.menu}}
+      }, (err,restaurant) => {
       ((err)) ? res.send(err) : res.send(restaurant)
     })
   },
